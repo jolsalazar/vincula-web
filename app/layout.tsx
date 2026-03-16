@@ -13,11 +13,20 @@ export const metadata: Metadata = {
     siteName: 'Vincula.io',
     locale: 'es_419',
     type: 'website',
+    images: [
+      {
+        url: 'https://vincula.io/og-image.svg',
+        width: 1200,
+        height: 630,
+        alt: 'Vincula.io — Reviews, recuperador de carrito y Google Merchant Sync',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Vincula.io — Vende más en tu ecommerce',
     description: 'Reviews automáticos, recuperador de carrito y Google Merchant Sync.',
+    images: ['https://vincula.io/og-image.svg'],
   },
   robots: {
     index: true,
