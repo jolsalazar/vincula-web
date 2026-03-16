@@ -201,7 +201,7 @@ export default function Comparison() {
               ¿Por qué Vincula y no las alternativas?
             </h2>
             <p className="section-subtitle" style={{margin:'0 auto'}}>
-              Construido para el ecommerce latinoamericano, incluyendo tiendas de desarrollo propio.
+              La única solución que incluye ecommerce de desarrollo propio, con soporte en español.
             </p>
           </div>
 

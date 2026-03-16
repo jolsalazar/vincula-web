@@ -359,8 +359,8 @@ export default function Hero() {
               </div>
 
               <h1 className="hero-title">
-                Vende más en tu ecommerce{' '}
-                <span className="highlight">latinoamericano</span>
+                Vende más con tu{' '}
+                <span className="highlight">tienda online</span>
               </h1>
 
               <p className="hero-subtitle">
@@ -381,8 +381,6 @@ export default function Hero() {
               </div>
 
               <div className="hero-trust">
-                <span>Sin tarjeta de crédito</span>
-                <span className="hero-trust-dot" />
                 <span>Setup en 5 minutos</span>
                 <span className="hero-trust-dot" />
                 <span>Soporte en español</span>

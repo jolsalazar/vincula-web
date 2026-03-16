@@ -21,7 +21,7 @@ const faqs = [
   },
   {
     q: '¿Tienen soporte en español?',
-    a: 'Soporte por WhatsApp en español, de lunes a viernes en horario laboral latinoamericano. En los planes Growth y Agency tienes soporte prioritario con respuesta en menos de 2 horas.',
+    a: 'Soporte por WhatsApp en español, de lunes a viernes. En los planes Growth y Agency tienes soporte prioritario con respuesta en menos de 2 horas.',
   },
   {
     q: '¿Hay período de prueba?',

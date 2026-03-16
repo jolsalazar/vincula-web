@@ -187,7 +187,7 @@ export default function Footer() {
 
           <div className="footer-bottom">
             <p className="footer-copy">
-              Hecho con <span className="footer-heart">❤️</span> para el ecommerce latinoamericano · vincula.io · {year}
+              Hecho con <span className="footer-heart">❤️</span> para el ecommerce en español · vincula.io · {year}
             </p>
             <div className="footer-legal">
               <a href="#">Términos de servicio</a>

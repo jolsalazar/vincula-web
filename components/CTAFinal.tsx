@@ -205,7 +205,7 @@ export default function CTAFinal() {
             </h2>
 
             <p className="cta-subtitle">
-              Únete a los primeros ecommerces latinoamericanos que están usando Vincula para vender más.
+              Únete a los primeros ecommerces que están usando Vincula para vender más.
             </p>
 
             <div className="cta-logos">
@@ -241,13 +241,6 @@ export default function CTAFinal() {
 
             {!submitted && (
               <div className="cta-micro">
-                <span className="cta-micro-item">
-                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-                    <path d="M2 6l2.5 2.5 5.5-5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                  Sin tarjeta de crédito
-                </span>
-                <span className="cta-micro-dot" />
                 <span className="cta-micro-item">
                   <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
                     <path d="M2 6l2.5 2.5 5.5-5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
