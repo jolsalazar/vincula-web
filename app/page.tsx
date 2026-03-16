@@ -3,6 +3,7 @@ import Hero from '@/components/Hero'
 import Platforms from '@/components/Platforms'
 import Features from '@/components/Features'
 import HowItWorks from '@/components/HowItWorks'
+import Results from '@/components/Results'
 import Pricing from '@/components/Pricing'
 import Comparison from '@/components/Comparison'
 import FAQ from '@/components/FAQ'
@@ -20,6 +21,7 @@ export default function Home() {
         <Platforms />
         <Features />
         <HowItWorks />
+        <Results />
         <Pricing />
         <Comparison />
         <FAQ />

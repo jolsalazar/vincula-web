@@ -12,168 +12,169 @@ export default function Comparison() {
 
   type CellValue = boolean | string | 'partial'
 
+  const Check = ({ highlight }: { highlight?: boolean }) => (
+    <span className={`comp-icon comp-check${highlight ? ' comp-check-hl' : ''}`}>
+      <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
+        <path d="M2.5 6.5l3 3 5-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+      </svg>
+    </span>
+  )
+
+  const Cross = () => (
+    <span className="comp-icon comp-cross">
+      <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
+        <path d="M3.5 3.5l6 6M9.5 3.5l-6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+      </svg>
+    </span>
+  )
+
   const renderCell = (val: CellValue, highlight = false) => {
-    if (val === true) return (
-      <span className={`comp-check${highlight ? ' comp-check-highlight' : ''}`}>
-        <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-          <path d="M3 7l3 3 5-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-        </svg>
-      </span>
-    )
-    if (val === false) return (
-      <span className="comp-cross">
-        <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-          <path d="M4 4l6 6M10 4l-6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-        </svg>
-      </span>
-    )
-    if (val === 'partial') return (
-      <span className="comp-partial">caro</span>
-    )
-    return (
-      <span className={`comp-price${highlight ? ' comp-price-highlight' : ''}`}>{val}</span>
-    )
+    if (val === true) return <Check highlight={highlight} />
+    if (val === false) return <Cross />
+    if (val === 'partial') return <span className="comp-partial">Solo en plan caro</span>
+    return <span className={`comp-price-cell${highlight ? ' comp-price-hl' : ''}`}>{val}</span>
   }
 
   return (
     <>
       <style>{`
         .comparison { background: var(--white); }
-        .comp-wrap {
+
+        .comp-container {
           margin-top: 56px;
-          overflow-x: auto;
           border-radius: 20px;
+          border: 1px solid var(--gray-200);
+          overflow: hidden;
           box-shadow: var(--shadow-lg);
-          border: 1px solid var(--gray-100);
         }
-        .comp-table {
-          width: 100%;
-          border-collapse: collapse;
-          min-width: 560px;
-        }
-        .comp-table th, .comp-table td {
-          padding: 0;
-          text-align: center;
-        }
-        .comp-table th:first-child,
-        .comp-table td:first-child {
-          text-align: left;
-        }
-        /* Header */
-        .comp-thead {
+
+        /* Header row */
+        .comp-header {
+          display: grid;
+          grid-template-columns: 2fr 1.2fr 1fr 1fr;
           background: var(--gray-50);
           border-bottom: 1px solid var(--gray-200);
         }
-        .comp-th {
-          padding: 18px 24px;
+        .comp-header-cell {
+          padding: 18px 20px;
           font-size: 13px;
           font-weight: 600;
-          color: var(--gray-500);
-          letter-spacing: 0.03em;
+          color: var(--gray-400);
+          letter-spacing: 0.04em;
+          text-transform: uppercase;
         }
-        .comp-th-vincula {
-          padding: 18px 24px;
+        .comp-header-cell.is-vincula {
           background: var(--blue);
-          color: var(--white) !important;
+          color: var(--white);
           position: relative;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          gap: 2px;
         }
-        .comp-th-vincula::before {
+        .comp-header-cell.is-vincula::before {
           content: '';
           position: absolute;
           top: 0; left: 0; right: 0;
           height: 3px;
           background: var(--green);
         }
-        .comp-th-badge {
-          display: inline-flex;
-          align-items: center;
-          gap: 6px;
-          font-size: 14px;
-          font-weight: 700;
+        .comp-col-name {
+          font-size: 15px;
+          font-weight: 800;
+          letter-spacing: -0.02em;
+          text-transform: none;
           color: var(--white);
         }
-        .comp-th-sub {
-          display: block;
+        .comp-col-badge {
+          display: inline-flex;
+          align-items: center;
+          gap: 4px;
+          background: rgba(255,255,255,0.15);
+          border-radius: 100px;
+          padding: 2px 8px;
           font-size: 10px;
-          font-weight: 500;
-          color: rgba(255,255,255,0.65);
-          margin-top: 2px;
-          letter-spacing: 0.05em;
+          font-weight: 600;
           text-transform: uppercase;
+          letter-spacing: 0.06em;
+          color: rgba(255,255,255,0.85);
+          margin-top: 2px;
+          width: fit-content;
         }
-        /* Rows */
-        .comp-tr { border-bottom: 1px solid var(--gray-100); }
-        .comp-tr:last-child { border-bottom: none; }
-        .comp-tr:hover .comp-td { background: var(--gray-50); }
-        .comp-tr:hover .comp-td-vincula { background: #1d4ed8; }
-        .comp-td {
-          padding: 16px 24px;
-          font-size: 14px;
-          color: var(--gray-600);
-          font-weight: 500;
+
+        /* Data rows */
+        .comp-row {
+          display: grid;
+          grid-template-columns: 2fr 1.2fr 1fr 1fr;
+          border-bottom: 1px solid var(--gray-100);
           transition: background 0.15s;
         }
-        .comp-td-vincula {
+        .comp-row:last-child { border-bottom: none; }
+        .comp-row:hover .comp-cell { background: var(--gray-50); }
+        .comp-row:hover .comp-cell.is-vincula { background: #1d58e8; }
+
+        .comp-cell {
+          padding: 16px 20px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: background 0.15s;
+        }
+        .comp-cell:first-child { justify-content: flex-start; }
+        .comp-cell.is-vincula {
           background: rgb(37 99 235 / 0.04);
-          border-left: 1px solid rgb(37 99 235 / 0.1);
-          border-right: 1px solid rgb(37 99 235 / 0.1);
-          transition: background 0.15s;
+          border-left: 1px solid rgb(37 99 235 / 0.12);
+          border-right: 1px solid rgb(37 99 235 / 0.12);
         }
+
         .comp-feature-name {
           font-size: 14px;
           color: var(--gray-700);
           font-weight: 500;
         }
-        /* Cell icons */
-        .comp-check {
-          display: inline-flex;
-          align-items: center;
-          justify-content: center;
-          width: 28px;
-          height: 28px;
+
+        /* Icons */
+        .comp-icon {
+          width: 28px; height: 28px;
           border-radius: 50%;
+          display: flex; align-items: center; justify-content: center;
+          flex-shrink: 0;
+        }
+        .comp-check {
           background: #ecfdf5;
           color: var(--green);
         }
-        .comp-check-highlight {
-          background: rgb(16 185 129 / 0.15);
-          color: #6ee7b7;
+        .comp-check-hl {
+          background: rgba(16,185,129,0.15);
+          color: #34d399;
         }
         .comp-cross {
-          display: inline-flex;
-          align-items: center;
-          justify-content: center;
-          width: 28px;
-          height: 28px;
-          border-radius: 50%;
           background: var(--gray-100);
           color: var(--gray-300);
         }
         .comp-partial {
-          display: inline-flex;
-          align-items: center;
-          justify-content: center;
-          padding: 3px 10px;
-          border-radius: 100px;
           font-size: 11px;
           font-weight: 600;
           background: #fef3c7;
           color: #92400e;
+          border-radius: 100px;
+          padding: 3px 10px;
+          white-space: nowrap;
         }
-        .comp-price {
+        .comp-price-cell {
           font-size: 13px;
           font-weight: 600;
           color: var(--gray-500);
         }
-        .comp-price-highlight {
+        .comp-price-hl {
           font-size: 14px;
           font-weight: 700;
-          color: #6ee7b7;
+          color: #34d399;
         }
-        /* Bottom note */
+
         .comp-note {
           text-align: center;
-          margin-top: 32px;
+          margin-top: 28px;
           font-size: 14px;
           color: var(--gray-400);
         }
@@ -183,8 +184,14 @@ export default function Comparison() {
           text-decoration: none;
         }
         .comp-note a:hover { text-decoration: underline; }
-        @media (max-width: 768px) {
-          .comp-th, .comp-td { padding: 14px 16px; }
+
+        @media (max-width: 640px) {
+          .comp-container { overflow-x: auto; }
+          .comp-header, .comp-row {
+            min-width: 520px;
+          }
+          .comp-header-cell, .comp-cell { padding: 14px 14px; }
+          .comp-feature-name { font-size: 13px; }
         }
       `}</style>
 
@@ -201,45 +208,40 @@ export default function Comparison() {
               ¿Por qué Vincula y no las alternativas?
             </h2>
             <p className="section-subtitle" style={{margin:'0 auto'}}>
-              La única solución que incluye ecommerce de desarrollo propio, con soporte en español.
+              La única solución con soporte real en español y compatibilidad con ecommerce de desarrollo propio.
             </p>
           </div>
 
-          <div className="comp-wrap reveal">
-            <table className="comp-table" role="table">
-              <thead>
-                <tr className="comp-thead">
-                  <th className="comp-th" scope="col" style={{width:'40%'}}>Característica</th>
-                  <th className="comp-th comp-th-vincula" scope="col">
-                    <span className="comp-th-badge">
-                      <span>Vincula.io</span>
-                    </span>
-                    <span className="comp-th-sub">Recomendado</span>
-                  </th>
-                  <th className="comp-th" scope="col">Judge.me</th>
-                  <th className="comp-th" scope="col">Yotpo</th>
-                </tr>
-              </thead>
-              <tbody>
-                {rows.map(row => (
-                  <tr key={row.feature} className="comp-tr">
-                    <td className="comp-td">
-                      <span className="comp-feature-name">{row.feature}</span>
-                    </td>
-                    <td className="comp-td comp-td-vincula">
-                      {renderCell(row.vincula, true)}
-                    </td>
-                    <td className="comp-td">{renderCell(row.judge)}</td>
-                    <td className="comp-td">{renderCell(row.yotpo)}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+          <div className="comp-container reveal">
+            {/* Header */}
+            <div className="comp-header">
+              <div className="comp-header-cell">Característica</div>
+              <div className="comp-header-cell is-vincula">
+                <span className="comp-col-name">Vincula.io</span>
+                <span className="comp-col-badge">⚡ Recomendado</span>
+              </div>
+              <div className="comp-header-cell" style={{textAlign:'center'}}>Judge.me</div>
+              <div className="comp-header-cell" style={{textAlign:'center'}}>Yotpo</div>
+            </div>
+
+            {/* Rows */}
+            {rows.map(row => (
+              <div key={row.feature} className="comp-row">
+                <div className="comp-cell">
+                  <span className="comp-feature-name">{row.feature}</span>
+                </div>
+                <div className="comp-cell is-vincula">
+                  {renderCell(row.vincula, true)}
+                </div>
+                <div className="comp-cell">{renderCell(row.judge)}</div>
+                <div className="comp-cell">{renderCell(row.yotpo)}</div>
+              </div>
+            ))}
           </div>
 
           <p className="comp-note reveal">
-            ¿Querés ver más detalle?{' '}
-            <a href="#cta">Hablemos por WhatsApp</a> y te mostramos cómo funciona en tu tienda.
+            ¿Quieres ver una demo en tu tienda?{' '}
+            <a href="#cta">Escríbenos y lo hacemos en 15 minutos.</a>
           </p>
         </div>
       </section>

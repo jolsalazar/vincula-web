@@ -17,7 +17,7 @@ const faqs = [
   },
   {
     q: '¿Cómo se cobra?',
-    a: 'Cobramos por PayPal en dólares estadounidenses. Sin contrato de permanencia, cancela cuando quieras sin penalidades. En el plan anual ahorras un 20% respecto al precio mensual.',
+    a: 'Cobramos por PayPal en dólares. Sin contrato de permanencia, cancela cuando quieras sin penalidades. En el plan anual ahorras un 20% respecto al precio mensual.',
   },
   {
     q: '¿Tienen soporte en español?',
@@ -25,7 +25,7 @@ const faqs = [
   },
   {
     q: '¿Hay período de prueba?',
-    a: 'Estamos en beta privada. Contactanos para solicitar acceso anticipado y ser de los primeros ecommerces en usar Vincula. Los primeros usuarios tienen precio especial garantizado de por vida.',
+    a: 'Estamos en beta privada. Contáctanos para solicitar acceso anticipado y ser de los primeros en usar Vincula. Los primeros usuarios tienen precio especial garantizado de por vida.',
   },
 ]
 
@@ -41,7 +41,7 @@ export default function FAQ() {
           margin: 56px auto 0;
           display: flex;
           flex-direction: column;
-          gap: 12px;
+          gap: 10px;
         }
         .faq-item {
           background: var(--white);
@@ -69,19 +69,16 @@ export default function FAQ() {
         }
         .faq-trigger:hover { background: var(--gray-50); }
         .faq-question {
-          font-size: 16px;
+          font-size: 15px;
           font-weight: 600;
           color: var(--gray-900);
           line-height: 1.4;
         }
         .faq-icon {
-          width: 28px;
-          height: 28px;
+          width: 28px; height: 28px;
           border-radius: 8px;
           background: var(--gray-100);
-          display: flex;
-          align-items: center;
-          justify-content: center;
+          display: flex; align-items: center; justify-content: center;
           flex-shrink: 0;
           transition: all 0.3s cubic-bezier(0.4,0,0.2,1);
           color: var(--gray-500);
@@ -91,24 +88,25 @@ export default function FAQ() {
           color: var(--blue);
           transform: rotate(180deg);
         }
+        /* Grid animation — needs min-height:0 on child */
         .faq-answer-wrap {
           display: grid;
           grid-template-rows: 0fr;
-          transition: grid-template-rows 0.35s cubic-bezier(0.4,0,0.2,1);
+          transition: grid-template-rows 0.3s cubic-bezier(0.4,0,0.2,1);
         }
         .faq-item.is-open .faq-answer-wrap {
           grid-template-rows: 1fr;
         }
         .faq-answer-inner {
           overflow: hidden;
+          min-height: 0;
         }
         .faq-answer {
-          padding: 0 24px 20px;
+          padding: 16px 24px 20px;
           font-size: 15px;
           color: var(--gray-500);
           line-height: 1.7;
           border-top: 1px solid var(--gray-100);
-          padding-top: 16px;
         }
         .faq-cta {
           text-align: center;
@@ -123,7 +121,7 @@ export default function FAQ() {
         @media (max-width: 768px) {
           .faq-question { font-size: 14px; }
           .faq-trigger { padding: 16px 18px; }
-          .faq-answer { padding: 0 18px 16px; padding-top: 12px; }
+          .faq-answer { padding: 12px 18px 16px; }
         }
       `}</style>
 
@@ -142,23 +140,20 @@ export default function FAQ() {
               Respondemos tus dudas
             </h2>
             <p className="section-subtitle" style={{margin:'0 auto'}}>
-              Si no encontrás lo que buscás, escribinos por WhatsApp.
+              Si no encuentras lo que buscas, escríbenos por WhatsApp.
             </p>
           </div>
 
-          <div className="faq-list" role="list">
+          <div className="faq-list">
             {faqs.map((faq, i) => (
               <div
                 key={i}
                 className={`faq-item reveal${i > 0 ? ` reveal-delay-${Math.min(i, 4)}` : ''}${open === i ? ' is-open' : ''}`}
-                role="listitem"
               >
                 <button
                   className="faq-trigger"
                   onClick={() => setOpen(open === i ? null : i)}
                   aria-expanded={open === i}
-                  id={`faq-trigger-${i}`}
-                  aria-controls={`faq-answer-${i}`}
                 >
                   <span className="faq-question">{faq.q}</span>
                   <span className="faq-icon" aria-hidden="true">
@@ -167,12 +162,7 @@ export default function FAQ() {
                     </svg>
                   </span>
                 </button>
-                <div
-                  className="faq-answer-wrap"
-                  role="region"
-                  id={`faq-answer-${i}`}
-                  aria-labelledby={`faq-trigger-${i}`}
-                >
+                <div className="faq-answer-wrap">
                   <div className="faq-answer-inner">
                     <div className="faq-answer">{faq.a}</div>
                   </div>
@@ -182,7 +172,7 @@ export default function FAQ() {
           </div>
 
           <div className="faq-cta reveal">
-            <p>¿Tenés más preguntas? <strong>Hablemos.</strong></p>
+            <p>¿Tienes más preguntas? <strong>Hablemos.</strong></p>
             <a
               href="https://wa.me/message/vincula"
               className="btn btn-outline"
@@ -193,7 +183,7 @@ export default function FAQ() {
                 <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
                 <path d="M12 0C5.373 0 0 5.373 0 12c0 2.13.56 4.122 1.534 5.847L.053 23.5l5.799-1.46A11.93 11.93 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.851 0-3.595-.5-5.101-1.375l-.364-.218-3.443.866.893-3.354-.236-.384A9.944 9.944 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
               </svg>
-              Escribinos por WhatsApp
+              Escríbenos por WhatsApp
             </a>
           </div>
         </div>
