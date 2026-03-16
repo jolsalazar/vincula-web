@@ -88,18 +88,9 @@ export default function FAQ() {
           color: var(--blue);
           transform: rotate(180deg);
         }
-        /* Grid animation — needs min-height:0 on child */
         .faq-answer-wrap {
-          display: grid;
-          grid-template-rows: 0fr;
-          transition: grid-template-rows 0.3s cubic-bezier(0.4,0,0.2,1);
-        }
-        .faq-item.is-open .faq-answer-wrap {
-          grid-template-rows: 1fr;
-        }
-        .faq-answer-inner {
           overflow: hidden;
-          min-height: 0;
+          transition: max-height 0.35s cubic-bezier(0.4,0,0.2,1);
         }
         .faq-answer {
           padding: 16px 24px 20px;
@@ -145,30 +136,34 @@ export default function FAQ() {
           </div>
 
           <div className="faq-list">
-            {faqs.map((faq, i) => (
-              <div
-                key={i}
-                className={`faq-item reveal${i > 0 ? ` reveal-delay-${Math.min(i, 4)}` : ''}${open === i ? ' is-open' : ''}`}
-              >
-                <button
-                  className="faq-trigger"
-                  onClick={() => setOpen(open === i ? null : i)}
-                  aria-expanded={open === i}
+            {faqs.map((faq, i) => {
+              const isOpen = open === i
+              return (
+                <div
+                  key={i}
+                  className={`faq-item reveal${i > 0 ? ` reveal-delay-${Math.min(i, 4)}` : ''}${isOpen ? ' is-open' : ''}`}
                 >
-                  <span className="faq-question">{faq.q}</span>
-                  <span className="faq-icon" aria-hidden="true">
-                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                      <path d="M3 5l4 4 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
-                  </span>
-                </button>
-                <div className="faq-answer-wrap">
-                  <div className="faq-answer-inner">
+                  <button
+                    className="faq-trigger"
+                    onClick={() => setOpen(isOpen ? null : i)}
+                    aria-expanded={isOpen}
+                  >
+                    <span className="faq-question">{faq.q}</span>
+                    <span className="faq-icon" aria-hidden="true">
+                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                        <path d="M3 5l4 4 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                      </svg>
+                    </span>
+                  </button>
+                  <div
+                    className="faq-answer-wrap"
+                    style={{ maxHeight: isOpen ? '400px' : '0' }}
+                  >
                     <div className="faq-answer">{faq.a}</div>
                   </div>
                 </div>
-              </div>
-            ))}
+              )
+            })}
           </div>
 
           <div className="faq-cta reveal">
