@@ -1,0 +1,7 @@
+# Redirects para Cloudflare Pages
+# Si usás dominio personalizado, agregá redirects de www a apex o viceversa
+
+# https://www.vincula.io/* -> https://vincula.io/:splat (configurar en Cloudflare dashboard)
+
+# SPA fallback — no necesario con output: 'export' + trailingSlash
+# /* /index.html 200
