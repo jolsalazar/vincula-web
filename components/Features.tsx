@@ -246,7 +246,7 @@ export default function Features() {
                       <path d="M2 5l2 2 4-4" stroke="#10B981" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
                   </span>
-                  Sin configuración adicional
+                  Se genera al publicar cada review
                 </li>
               </ul>
               <a href="#pricing" className="feature-link" style={{color:'var(--green-dark)'}}>

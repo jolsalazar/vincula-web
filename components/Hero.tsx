@@ -321,9 +321,9 @@ export default function Hero() {
               </div>
 
               <div className="hero-trust">
-                <span>Setup en 5 minutos</span>
+                <span>Widget activo en minutos</span>
                 <span className="hero-trust-dot" />
-                <span>Sin desarrolladores</span>
+                <span>Onboarding asistido</span>
                 <span className="hero-trust-dot" />
                 <span>Soporte en español</span>
               </div>
@@ -331,19 +331,19 @@ export default function Hero() {
               <div className="hero-stats">
                 <div className="hero-stat-item">
                   <span className="hero-stat-value">+2,400</span>
-                  <span className="hero-stat-label">reviews recolectados</span>
+                  <span className="hero-stat-label">reviews recolectados en beta</span>
                 </div>
                 <div className="hero-stat-item">
                   <span className="hero-stat-value">4.8/5</span>
-                  <span className="hero-stat-label">rating promedio</span>
+                  <span className="hero-stat-label">rating promedio recolectado</span>
                 </div>
                 <div className="hero-stat-item">
-                  <span className="hero-stat-value">+30%</span>
-                  <span className="hero-stat-label">más conversión</span>
+                  <span className="hero-stat-value">~25%</span>
+                  <span className="hero-stat-label">tasa de respuesta a emails</span>
                 </div>
                 <div className="hero-stat-item">
-                  <span className="hero-stat-value">3 min</span>
-                  <span className="hero-stat-label">instalación promedio</span>
+                  <span className="hero-stat-value">48h</span>
+                  <span className="hero-stat-label">hasta el primer review</span>
                 </div>
               </div>
             </div>
@@ -436,8 +436,8 @@ export default function Hero() {
                 <div className="float-badge float-badge-2">
                   <span style={{fontSize:'18px'}}>📈</span>
                   <div>
-                    <div style={{fontSize:'11px',color:'var(--gray-500)'}}>Conversión</div>
-                    <div style={{color:'var(--green)',fontWeight:700}}>+18% este mes</div>
+                    <div style={{fontSize:'11px',color:'var(--gray-500)'}}>Más reviews</div>
+                    <div style={{color:'var(--green)',fontWeight:700}}>cada semana</div>
                   </div>
                 </div>
               </div>

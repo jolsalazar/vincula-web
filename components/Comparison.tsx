@@ -207,8 +207,8 @@ export default function Comparison() {
               ¿Por qué Vincula y no las alternativas?
             </h2>
             <p className="section-subtitle" style={{margin:'0 auto'}}>
-              La única solución de reviews con soporte real en español y compatibilidad
-              con tiendas de desarrollo propio.
+              La mejor opción de reviews para ecommerce en español,
+              con soporte real y compatibilidad con tiendas de desarrollo propio.
             </p>
           </div>
 

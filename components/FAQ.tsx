@@ -1,23 +1,23 @@
 const faqs = [
   {
-    q: '¿Cómo instalo Vincula en mi tienda?',
-    a: 'Una línea de código, igual que Google Analytics. Copia el snippet que te damos al registrarte y pégalo en el <head> de tu tienda. Sin programación, sin desarrolladores. Si tienes dudas, te ayudamos por WhatsApp.',
+    q: '¿Qué necesito para empezar con Vincula?',
+    a: 'El setup tiene dos partes. Primero, instalas el widget: pegas un script en el <head> de tu tienda y el widget de reviews queda visible de inmediato. Segundo, conectas tu tienda para que Vincula reciba notificaciones de cada compra y pueda enviar los emails automáticamente. Ese segundo paso lo hacemos juntos en el onboarding — no toma más de una sesión.',
   },
   {
-    q: '¿Funciona con ecommerce de desarrollo propio?',
-    a: 'Sí, y es uno de los principales casos de uso. Si tienes una tienda desarrollada a medida (Node.js, Laravel, Django, o cualquier otra tecnología), solo pegas el snippet en tu HTML y listo. No dependes de ningún plugin ni plataforma específica.',
+    q: '¿Cómo sabe Vincula cuándo ocurre una compra?',
+    a: 'A través de una integración con tu plataforma. En Shopify, WooCommerce, Tiendanube o Jumpseller: configuramos un webhook en los ajustes de tu tienda, sin tocar código. En tiendas de desarrollo propio: tu equipo técnico hace una llamada a nuestra API cuando una orden se completa. Documentamos este paso detalladamente y lo acompañamos en el onboarding.',
   },
   {
-    q: '¿Cómo se recolectan los reviews de mis clientes?',
-    a: 'Cuando alguien completa una compra en tu tienda, Vincula detecta el evento y envía automáticamente un email pidiéndole su opinión sobre el producto. Si no responde, envía un recordatorio. El formulario es simple y está optimizado para que el cliente lo complete en menos de un minuto desde cualquier dispositivo.',
+    q: '¿Funciona con tiendas de desarrollo propio?',
+    a: 'Sí. El widget se instala igual que en cualquier otra plataforma. La diferencia es la integración de órdenes: necesitarás que alguien en tu equipo técnico agregue una llamada a nuestra API cuando se confirma una compra. Es una integración simple y bien documentada, pero requiere acceso al código de tu backend.',
   },
   {
     q: '¿Cómo se muestran los reviews en mi tienda?',
-    a: 'Con un widget embebible que pegas donde quieras en tu página de producto. Muestra el rating promedio, la distribución de estrellas y los últimos reviews. Es personalizable en colores y fuentes para que se integre al diseño de tu tienda, y no afecta la velocidad de carga.',
+    a: 'Con un widget embebible que colocas en tu página de producto. Muestra el rating promedio, la distribución de estrellas y los últimos reviews. Es personalizable en colores y fuentes para que se integre al diseño de tu tienda, y no afecta la velocidad de carga.',
   },
   {
     q: '¿Los reviews aparecen en Google?',
-    a: 'Sí. Vincula genera automáticamente el marcado JSON-LD necesario para que Google interprete las valoraciones de tus productos. Esto hace que tus páginas de producto puedan aparecer con estrellas en los resultados de búsqueda, lo que mejora el porcentaje de clicks sin ningún costo adicional.',
+    a: 'Vincula genera automáticamente el marcado JSON-LD necesario para que Google pueda interpretar las valoraciones de tus productos. Esto permite que tus páginas aparezcan con estrellas en los resultados de búsqueda. Ten en cuenta que Google requiere un mínimo de reviews y puede tardar algunas semanas en mostrarlos — no es inmediato.',
   },
   {
     q: '¿Cómo se cobra?',
@@ -25,11 +25,11 @@ const faqs = [
   },
   {
     q: '¿Tienen soporte en español?',
-    a: 'Soporte por WhatsApp en español, de lunes a viernes. En los planes Growth y Agency tienes soporte prioritario con respuesta en menos de 2 horas.',
+    a: 'Soporte por WhatsApp en español, de lunes a viernes en horario laboral. Respondemos lo antes posible — en horas pico puede demorar más, pero siempre respondemos el mismo día.',
   },
   {
     q: '¿Cómo es el proceso de onboarding?',
-    a: 'El acceso es por solicitud para garantizar soporte personalizado a cada tienda. Una vez aprobada tu solicitud, te contactamos en menos de 24 horas para hacer el setup juntos. Los primeros clientes tienen precio especial garantizado.',
+    a: 'El acceso es por solicitud. Una vez aprobado, te contactamos para hacer el setup juntos: instalación del widget, integración de órdenes y configuración de los emails. Dedicamos tiempo real a cada tienda para que todo quede funcionando correctamente. Los primeros clientes tienen precio especial garantizado.',
   },
 ]
 

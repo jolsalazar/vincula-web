@@ -4,6 +4,7 @@ import Platforms from '@/components/Platforms'
 import Features from '@/components/Features'
 import HowItWorks from '@/components/HowItWorks'
 import Results from '@/components/Results'
+import Testimonials from '@/components/Testimonials'
 import Pricing from '@/components/Pricing'
 import Comparison from '@/components/Comparison'
 import FAQ from '@/components/FAQ'
@@ -22,6 +23,7 @@ export default function Home() {
         <Features />
         <HowItWorks />
         <Results />
+        <Testimonials />
         <Pricing />
         <Comparison />
         <FAQ />
