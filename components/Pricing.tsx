@@ -353,7 +353,7 @@ export default function Pricing() {
               Precios simples, sin sorpresas
             </h2>
             <p className="section-subtitle" style={{margin:'0 auto'}}>
-              Sin contratos ni letra chica. Cancela cuando quieras.
+              Todos los planes incluyen el sistema completo de reviews. Sin contratos ni letra chica.
             </p>
           </div>
 
@@ -447,8 +447,8 @@ export default function Pricing() {
 
           {/* Addons */}
           <div className="addons-section reveal">
-            <h3 className="addons-title">Potencia tu plan</h3>
-            <p className="addons-subtitle">Agrega funciones extra a cualquier plan cuando lo necesites.</p>
+            <h3 className="addons-title">Funciones adicionales opcionales</h3>
+            <p className="addons-subtitle">Agrega estas funciones a cualquier plan si las necesitas. No son parte del producto principal.</p>
             <div className="addons-grid">
               {addons.map(addon => (
                 <div key={addon.name} className="addon-card">

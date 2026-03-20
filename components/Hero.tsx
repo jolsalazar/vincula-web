@@ -99,7 +99,6 @@ export default function Hero() {
           background: var(--gray-300);
           flex-shrink: 0;
         }
-        /* Social proof strip inside hero */
         .hero-stats {
           display: flex;
           gap: 28px;
@@ -152,25 +151,85 @@ export default function Hero() {
           color: var(--gray-400);
           margin-left: 8px;
           flex: 1;
-          max-width: 180px;
+          max-width: 200px;
         }
         .dashboard-body { padding: 20px; }
         .dash-header {
           display: flex;
           align-items: center;
           justify-content: space-between;
-          margin-bottom: 18px;
+          margin-bottom: 16px;
         }
         .dash-header-title { font-size: 15px; font-weight: 700; color: var(--gray-900); }
         .dash-header-date {
           font-size: 11px; color: var(--gray-400);
           background: var(--gray-100); padding: 3px 8px; border-radius: 6px;
         }
-        .dash-stats {
+        /* Rating summary */
+        .dash-rating-summary {
+          background: var(--gray-50);
+          border: 1px solid var(--gray-100);
+          border-radius: 14px;
+          padding: 16px;
+          margin-bottom: 14px;
+          display: flex;
+          align-items: center;
+          gap: 16px;
+        }
+        .dash-rating-big {
+          text-align: center;
+          flex-shrink: 0;
+        }
+        .dash-rating-number {
+          font-size: 36px;
+          font-weight: 900;
+          color: var(--gray-900);
+          line-height: 1;
+          letter-spacing: -0.04em;
+        }
+        .dash-rating-stars {
+          display: flex;
+          gap: 2px;
+          justify-content: center;
+          margin-top: 4px;
+        }
+        .dash-rating-total {
+          font-size: 10px;
+          color: var(--gray-400);
+          margin-top: 2px;
+          font-weight: 500;
+        }
+        .dash-rating-bars {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+        }
+        .dash-bar-row {
+          display: flex;
+          align-items: center;
+          gap: 6px;
+          font-size: 9px;
+          color: var(--gray-400);
+        }
+        .dash-bar-track {
+          flex: 1;
+          height: 4px;
+          background: var(--gray-200);
+          border-radius: 2px;
+          overflow: hidden;
+        }
+        .dash-bar-fill {
+          height: 100%;
+          background: #fbbf24;
+          border-radius: 2px;
+        }
+        /* Stats row */
+        .dash-stats-row {
           display: grid;
-          grid-template-columns: repeat(3, 1fr);
+          grid-template-columns: repeat(2, 1fr);
           gap: 10px;
-          margin-bottom: 16px;
+          margin-bottom: 14px;
         }
         .dash-stat {
           background: var(--gray-50);
@@ -182,24 +241,6 @@ export default function Hero() {
         .dash-stat-value { font-size: 20px; font-weight: 800; color: var(--gray-900); line-height: 1; }
         .dash-stat-change { font-size: 10px; font-weight: 600; margin-top: 2px; }
         .dash-stat-change.up { color: var(--green); }
-        .dash-chart {
-          background: var(--gray-50);
-          border: 1px solid var(--gray-100);
-          border-radius: 12px;
-          padding: 14px;
-          margin-bottom: 12px;
-        }
-        .dash-chart-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
-        .dash-chart-title { font-size: 11px; font-weight: 600; color: var(--gray-600); }
-        .dash-chart-legend { display: flex; gap: 10px; }
-        .legend-item { display: flex; align-items: center; gap: 4px; font-size: 10px; color: var(--gray-400); }
-        .legend-dot { width: 6px; height: 6px; border-radius: 50%; }
-        .chart-bars { display: flex; align-items: flex-end; gap: 6px; height: 60px; }
-        .chart-bar-group { display: flex; gap: 2px; flex: 1; align-items: flex-end; }
-        .chart-bar { flex: 1; border-radius: 4px 4px 0 0; transition: opacity 0.2s; }
-        .chart-bar:hover { opacity: 0.8; }
-        .chart-labels { display: flex; gap: 6px; margin-top: 6px; }
-        .chart-label { flex: 1; text-align: center; font-size: 9px; color: var(--gray-400); }
         .dash-reviews { display: flex; flex-direction: column; gap: 8px; }
         .dash-review-item {
           display: flex; align-items: center; gap: 10px;
@@ -213,7 +254,7 @@ export default function Hero() {
         }
         .review-info { flex: 1; min-width: 0; }
         .review-name { font-size: 11px; font-weight: 600; color: var(--gray-800); }
-        .review-product { font-size: 10px; color: var(--gray-400); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .review-text { font-size: 10px; color: var(--gray-400); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
         .review-stars { display: flex; gap: 1px; flex-shrink: 0; }
         .star-icon { font-size: 10px; }
         .float-badge {
@@ -253,23 +294,23 @@ export default function Hero() {
             <div className="hero-content reveal">
               <div className="hero-badge">
                 <span className="dot" />
-                Reviews · Carrito abandonado · Google Shopping
+                Reviews automáticos para tu tienda
               </div>
 
               <h1 className="hero-title">
-                Tu tienda pierde ventas<br />
-                todos los días.<br />
-                <span className="highlight">Vincula lo soluciona.</span>
+                Convierte cada compra<br />
+                en una reseña que<br />
+                <span className="highlight">genera confianza.</span>
               </h1>
 
               <p className="hero-subtitle">
-                La herramienta de growth para ecommerce en español: reviews que generan confianza,
-                carritos recuperados automáticamente y visibilidad gratis en Google Shopping.
+                Vincula recolecta reviews reales de tus clientes, los muestra en tu tienda
+                y los usa para mejorar tu visibilidad en Google. Automático, desde el primer día.
               </p>
 
               <div className="hero-actions">
                 <a href="#cta" className="btn btn-primary btn-lg">
-                  Quiero acceso
+                  Solicitar acceso
                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                     <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
@@ -282,24 +323,23 @@ export default function Hero() {
               <div className="hero-trust">
                 <span>Setup en 5 minutos</span>
                 <span className="hero-trust-dot" />
-                <span>Cancela cuando quieras</span>
+                <span>Sin desarrolladores</span>
                 <span className="hero-trust-dot" />
                 <span>Soporte en español</span>
               </div>
 
-              {/* Social proof numbers */}
               <div className="hero-stats">
                 <div className="hero-stat-item">
-                  <span className="hero-stat-value">+120</span>
-                  <span className="hero-stat-label">tiendas activas</span>
-                </div>
-                <div className="hero-stat-item">
-                  <span className="hero-stat-value">$890</span>
-                  <span className="hero-stat-label">recuperados/mes promedio</span>
+                  <span className="hero-stat-value">+2,400</span>
+                  <span className="hero-stat-label">reviews recolectados</span>
                 </div>
                 <div className="hero-stat-item">
                   <span className="hero-stat-value">4.8/5</span>
-                  <span className="hero-stat-label">satisfacción de clientes</span>
+                  <span className="hero-stat-label">rating promedio</span>
+                </div>
+                <div className="hero-stat-item">
+                  <span className="hero-stat-value">+30%</span>
+                  <span className="hero-stat-label">más conversión</span>
                 </div>
                 <div className="hero-stat-item">
                   <span className="hero-stat-value">3 min</span>
@@ -316,63 +356,64 @@ export default function Hero() {
                     <span className="titlebar-dot" style={{background:'#ff5f57'}} />
                     <span className="titlebar-dot" style={{background:'#febc2e'}} />
                     <span className="titlebar-dot" style={{background:'#28c840'}} />
-                    <span className="titlebar-url">app.vincula.io/dashboard</span>
+                    <span className="titlebar-url">app.vincula.io/reviews</span>
                   </div>
                   <div className="dashboard-body">
                     <div className="dash-header">
-                      <span className="dash-header-title">Dashboard</span>
+                      <span className="dash-header-title">Reviews</span>
                       <span className="dash-header-date">Mar 2025</span>
                     </div>
-                    <div className="dash-stats">
-                      <div className="dash-stat">
-                        <div className="dash-stat-label">Reviews</div>
-                        <div className="dash-stat-value">284</div>
-                        <div className="dash-stat-change up">↑ 18%</div>
-                      </div>
-                      <div className="dash-stat">
-                        <div className="dash-stat-label">Recuperados</div>
-                        <div className="dash-stat-value">47</div>
-                        <div className="dash-stat-change up">↑ 32%</div>
-                      </div>
-                      <div className="dash-stat">
-                        <div className="dash-stat-label">$ Mes</div>
-                        <div className="dash-stat-value" style={{fontSize:'17px'}}>$3.2k</div>
-                        <div className="dash-stat-change up">↑ 24%</div>
-                      </div>
-                    </div>
-                    <div className="dash-chart">
-                      <div className="dash-chart-header">
-                        <span className="dash-chart-title">Conversiones últimas 4 semanas</span>
-                        <div className="dash-chart-legend">
-                          <span className="legend-item"><span className="legend-dot" style={{background:'var(--blue)'}} />Reviews</span>
-                          <span className="legend-item"><span className="legend-dot" style={{background:'var(--green)'}} />Carrito</span>
+
+                    {/* Rating summary */}
+                    <div className="dash-rating-summary">
+                      <div className="dash-rating-big">
+                        <div className="dash-rating-number">4.8</div>
+                        <div className="dash-rating-stars">
+                          {[1,2,3,4,5].map(i => (
+                            <span key={i} style={{fontSize:'12px'}}>⭐</span>
+                          ))}
                         </div>
+                        <div className="dash-rating-total">284 reviews</div>
                       </div>
-                      <div className="chart-bars">
-                        {[{r:45,c:30},{r:55,c:38},{r:40,c:25},{r:70,c:50},{r:58,c:42},{r:80,c:55},{r:65,c:40},{r:90,c:65}].map((bar, i) => (
-                          <div key={i} className="chart-bar-group">
-                            <div className="chart-bar" style={{height:`${bar.r}%`, background:'var(--blue)', opacity:0.8}} />
-                            <div className="chart-bar" style={{height:`${bar.c}%`, background:'var(--green)', opacity:0.8}} />
+                      <div className="dash-rating-bars">
+                        {[{stars:5,pct:78},{stars:4,pct:14},{stars:3,pct:5},{stars:2,pct:2},{stars:1,pct:1}].map(r => (
+                          <div key={r.stars} className="dash-bar-row">
+                            <span style={{minWidth:'6px'}}>{r.stars}</span>
+                            <div className="dash-bar-track">
+                              <div className="dash-bar-fill" style={{width:`${r.pct}%`}} />
+                            </div>
+                            <span style={{minWidth:'22px'}}>{r.pct}%</span>
                           </div>
                         ))}
                       </div>
-                      <div className="chart-labels">
-                        {['S1','S2','S3','S4','S5','S6','S7','S8'].map(l => (
-                          <span key={l} className="chart-label">{l}</span>
-                        ))}
+                    </div>
+
+                    {/* Stats */}
+                    <div className="dash-stats-row">
+                      <div className="dash-stat">
+                        <div className="dash-stat-label">Este mes</div>
+                        <div className="dash-stat-value">47</div>
+                        <div className="dash-stat-change up">↑ 18% reviews</div>
+                      </div>
+                      <div className="dash-stat">
+                        <div className="dash-stat-label">Tasa respuesta</div>
+                        <div className="dash-stat-value">34%</div>
+                        <div className="dash-stat-change up">↑ emails enviados</div>
                       </div>
                     </div>
+
+                    {/* Recent reviews */}
                     <div className="dash-reviews">
                       {[
-                        {name:'María G.', product:'Zapatillas Running', stars:5, color:'#2563EB', initial:'MG'},
-                        {name:'Carlos M.', product:'Remera Oversize', stars:5, color:'#7c3aed', initial:'CM'},
-                        {name:'Ana P.', product:'Mochila Urbana', stars:4, color:'#0891b2', initial:'AP'},
+                        {name:'María G.', text:'"Excelente calidad, llegó rápido"', stars:5, color:'#2563EB', initial:'MG'},
+                        {name:'Carlos M.', text:'"Justo lo que buscaba, muy bueno"', stars:5, color:'#7c3aed', initial:'CM'},
+                        {name:'Ana P.', text:'"Buen producto, recomiendo"', stars:4, color:'#0891b2', initial:'AP'},
                       ].map(r => (
                         <div key={r.name} className="dash-review-item">
                           <div className="review-avatar" style={{background: r.color}}>{r.initial}</div>
                           <div className="review-info">
                             <div className="review-name">{r.name}</div>
-                            <div className="review-product">{r.product}</div>
+                            <div className="review-text">{r.text}</div>
                           </div>
                           <div className="review-stars">
                             {Array.from({length:5}).map((_,i) => (
@@ -384,18 +425,19 @@ export default function Hero() {
                     </div>
                   </div>
                 </div>
+
                 <div className="float-badge float-badge-1">
-                  <span style={{fontSize:'18px'}}>🛒</span>
-                  <div>
-                    <div style={{fontSize:'11px',color:'var(--gray-500)'}}>Carrito recuperado</div>
-                    <div style={{color:'var(--green)',fontWeight:700}}>+$89.00</div>
-                  </div>
-                </div>
-                <div className="float-badge float-badge-2">
                   <span style={{fontSize:'18px'}}>⭐</span>
                   <div>
                     <div style={{fontSize:'11px',color:'var(--gray-500)'}}>Nuevo review</div>
                     <div style={{color:'var(--blue)'}}>5 estrellas</div>
+                  </div>
+                </div>
+                <div className="float-badge float-badge-2">
+                  <span style={{fontSize:'18px'}}>📈</span>
+                  <div>
+                    <div style={{fontSize:'11px',color:'var(--gray-500)'}}>Conversión</div>
+                    <div style={{color:'var(--green)',fontWeight:700}}>+18% este mes</div>
                   </div>
                 </div>
               </div>

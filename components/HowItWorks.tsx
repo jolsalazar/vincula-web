@@ -12,18 +12,18 @@ export default function HowItWorks() {
     {
       number: '02',
       icon: '⚙️',
-      title: 'Configura en el dashboard',
-      description: 'Personaliza los emails, el diseño del widget y tus preferencias desde un panel simple e intuitivo.',
-      detail: 'Colores, textos, timing de emails, todo desde una interfaz visual. Sin tocar código.',
+      title: 'Personaliza el widget y los emails',
+      description: 'Desde el dashboard configurás los textos, colores, timing de los emails y cómo se muestran los reviews.',
+      detail: 'Todo desde una interfaz visual. Sin tocar código, sin llamar a un desarrollador.',
       color: '#d1fae5',
       textColor: '#065f46',
     },
     {
       number: '03',
       icon: '📈',
-      title: 'Empieza a convertir',
-      description: 'Mira en tiempo real los reviews nuevos, los carritos recuperados y el impacto en tus ventas.',
-      detail: 'Métricas claras, sin datos basura. Sabes exactamente cuánto dinero te está generando Vincula.',
+      title: 'Tus reviews trabajan solos',
+      description: 'Cada compra dispara el flujo automáticamente: email, recordatorio y publicación del review.',
+      detail: 'Desde el dashboard ves en tiempo real cuántos reviews llegaron, tu rating actual y cuántos emails se enviaron.',
       color: '#ede9fe',
       textColor: '#4c1d95',
     },
@@ -210,10 +210,10 @@ export default function HowItWorks() {
               Cómo funciona
             </span>
             <h2 className="section-title" style={{marginBottom:'16px'}}>
-              Listo en minutos, no en días
+              Instalado en minutos,<br />reviews desde el primer día
             </h2>
             <p className="section-subtitle" style={{margin:'0 auto'}}>
-              Sin desarrolladores, sin integraciones complicadas. Tres pasos y ya estás vendiendo más.
+              Sin desarrolladores ni integraciones complicadas. Una línea de código y Vincula empieza a trabajar.
             </p>
           </div>
 

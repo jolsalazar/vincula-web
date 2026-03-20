@@ -174,35 +174,25 @@ export default function Results() {
                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
                   <path d="M2 9l3-3 2 2 3-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
-                Resultados reales
+                Por qué importan los reviews
               </span>
               <h2 className="results-title">
-                ¿Cuánto dinero estás<br />
-                <span>dejando sobre la mesa?</span>
+                Las tiendas con reviews<br />
+                <span>convierten más.</span>
               </h2>
               <p className="results-subtitle">
-                Tu tienda ya tiene el tráfico. Vincula convierte ese tráfico en ventas que hoy se están yendo.
+                La prueba social es el factor que más influye en la decisión de compra.
+                Vincula te ayuda a construirla de forma automática, sin esfuerzo.
               </p>
             </div>
 
             <div className="results-grid">
               <div className="result-card reveal reveal-delay-1">
                 <span className="result-icon">🛒</span>
-                <h3 className="result-card-title">El carrito abandonado ya casi era tuyo</h3>
+                <h3 className="result-card-title">Más confianza, más ventas</h3>
                 <p className="result-card-body">
-                  Un cliente que llega al carrito ya eligió tu producto. Solo necesita el empujón correcto en el momento exacto.
-                </p>
-                <div className="result-highlight">
-                  <div className="result-highlight-value">+$890/mes</div>
-                  <div className="result-highlight-label">promedio recuperado por tienda en beta</div>
-                </div>
-              </div>
-
-              <div className="result-card reveal reveal-delay-2">
-                <span className="result-icon">⭐</span>
-                <h3 className="result-card-title">Los reviews generan ventas mientras dormís</h3>
-                <p className="result-card-body">
-                  Las tiendas con más de 50 reviews convierten un 30% más que las que no tienen ninguno. La confianza se construye automáticamente.
+                  El visitante que llega a tu tienda por primera vez no te conoce.
+                  Ver reviews reales de otros compradores es lo que convierte la duda en compra.
                 </p>
                 <div className="result-highlight">
                   <div className="result-highlight-value">+30%</div>
@@ -210,15 +200,30 @@ export default function Results() {
                 </div>
               </div>
 
-              <div className="result-card reveal reveal-delay-3">
-                <span className="result-icon">🛍️</span>
-                <h3 className="result-card-title">Google Shopping: tráfico sin pagar publicidad</h3>
+              <div className="result-card reveal reveal-delay-2">
+                <span className="result-icon">🔍</span>
+                <h3 className="result-card-title">Estrellas en Google, más clicks</h3>
                 <p className="result-card-body">
-                  Tus productos aparecen en Google cuando alguien los busca. Sin costo por clic, sin campañas, sin agencias.
+                  Con rich snippets activos, tus productos aparecen con rating de estrellas
+                  en los resultados de búsqueda. Más visibilidad, sin pagar más publicidad.
                 </p>
                 <div className="result-highlight">
-                  <div className="result-highlight-value">Gratis</div>
-                  <div className="result-highlight-label">tráfico orgánico desde Google Shopping</div>
+                  <div className="result-highlight-value">+18%</div>
+                  <div className="result-highlight-label">más clicks desde resultados orgánicos</div>
+                </div>
+              </div>
+
+              <div className="result-card reveal reveal-delay-3">
+                <span className="result-icon">⚡</span>
+                <h3 className="result-card-title">Reviews que llegan solos</h3>
+                <p className="result-card-body">
+                  Cada compra dispara el proceso automáticamente. Email, recordatorio,
+                  publicación. Tú no haces nada. Los reviews se acumulan mientras trabajás
+                  en tu negocio.
+                </p>
+                <div className="result-highlight">
+                  <div className="result-highlight-value">0</div>
+                  <div className="result-highlight-label">intervención manual requerida</div>
                 </div>
               </div>
             </div>
@@ -226,21 +231,22 @@ export default function Results() {
             {/* Math row */}
             <div className="results-math reveal">
               <div className="math-item">
-                <span className="math-value">$5,000</span>
-                <span className="math-label">ventas mensuales actuales</span>
+                <span className="math-value">1,000</span>
+                <span className="math-label">visitas/mes a tu tienda</span>
               </div>
               <span className="math-separator">×</span>
               <div className="math-item">
-                <span className="math-value">15%</span>
-                <span className="math-label">de carritos recuperados</span>
+                <span className="math-value">+30%</span>
+                <span className="math-label">más conversión con reviews</span>
               </div>
               <span className="math-separator">=</span>
               <div className="math-item math-result">
-                <span className="math-value">+$750/mes</span>
-                <span className="math-label">ingresos adicionales</span>
+                <span className="math-value">+300 ventas</span>
+                <span className="math-label">adicionales con el mismo tráfico</span>
               </div>
               <p className="math-note">
-                Con un plan de $35/mes, el recuperador de carrito se paga solo en las primeras 24 horas de uso.
+                Reviews activos no requieren más inversión en publicidad.
+                El tráfico que ya tenés convierte mejor.
               </p>
             </div>
           </div>

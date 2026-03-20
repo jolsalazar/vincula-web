@@ -44,13 +44,6 @@ export default function Features() {
           margin-bottom: 20px;
           position: relative;
         }
-        .feature-icon-wrap::after {
-          content: '';
-          position: absolute;
-          inset: -2px;
-          border-radius: 16px;
-          opacity: 0.2;
-        }
         .feature-tag {
           display: inline-flex;
           padding: 4px 10px;
@@ -86,17 +79,6 @@ export default function Features() {
           gap: 8px;
           font-size: 13px;
           color: var(--gray-600);
-        }
-        .feature-bullets li::before {
-          content: '';
-          width: 18px;
-          height: 18px;
-          border-radius: 50%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-shrink: 0;
-          font-size: 10px;
         }
         .bullet-check {
           width: 18px;
@@ -137,23 +119,25 @@ export default function Features() {
               Características
             </span>
             <h2 className="section-title" style={{marginBottom:'16px'}}>
-              Todo lo que tu tienda necesita<br />para vender más
+              Todo lo que necesitas para<br />activar el poder de las reviews
             </h2>
             <p className="section-subtitle" style={{margin:'0 auto'}}>
-              Tres herramientas en una plataforma. Instalación simple, resultados desde el primer día.
+              Un sistema completo que recolecta, muestra y aprovecha las reseñas de tus clientes.
+              Simple de instalar, automático de usar.
             </p>
           </div>
 
           <div className="features-grid">
-            {/* Card 1 */}
+            {/* Card 1: Recolección */}
             <div className="feature-card reveal reveal-delay-1">
               <div className="feature-icon-wrap" style={{background:'#fef3c7'}}>
-                <span>⭐</span>
+                <span>✉️</span>
               </div>
-              <span className="feature-tag" style={{background:'#fef3c7', color:'#92400e'}}>Reviews</span>
-              <h3 className="feature-title">Reviews automáticos</h3>
+              <span className="feature-tag" style={{background:'#fef3c7', color:'#92400e'}}>Recolección</span>
+              <h3 className="feature-title">Reviews automáticos post-compra</h3>
               <p className="feature-desc">
-                Solicita reviews post-compra automáticamente. Muéstralos con rich snippets para Google y aumenta tu credibilidad.
+                Cuando alguien compra en tu tienda, Vincula le envía un email pidiendo su opinión.
+                Sin intervención manual, sin recordarlo tú.
               </p>
               <ul className="feature-bullets">
                 <li>
@@ -170,7 +154,7 @@ export default function Features() {
                       <path d="M2 5l2 2 4-4" stroke="#10B981" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
                   </span>
-                  Rich snippets para Google SEO
+                  Recordatorio si no respondió
                 </li>
                 <li>
                   <span className="bullet-check">
@@ -178,7 +162,7 @@ export default function Features() {
                       <path d="M2 5l2 2 4-4" stroke="#10B981" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
                   </span>
-                  Widget embebible personalizable
+                  Formulario simple y rápido de completar
                 </li>
               </ul>
               <a href="#pricing" className="feature-link" style={{color:'#d97706'}}>
@@ -186,15 +170,16 @@ export default function Features() {
               </a>
             </div>
 
-            {/* Card 2 */}
+            {/* Card 2: Widget */}
             <div className="feature-card reveal reveal-delay-2">
               <div className="feature-icon-wrap" style={{background:'#dbeafe'}}>
-                <span>🛒</span>
+                <span>⭐</span>
               </div>
-              <span className="feature-tag" style={{background:'#dbeafe', color:'#1e40af'}}>Carrito</span>
-              <h3 className="feature-title">Recuperador de carrito</h3>
+              <span className="feature-tag" style={{background:'#dbeafe', color:'#1e40af'}}>Widget</span>
+              <h3 className="feature-title">Reviews visibles en tu tienda</h3>
               <p className="feature-desc">
-                El 70% de los carritos se abandonan. Recupéralos con emails automáticos y convierte visitas en ventas.
+                Muestra las reseñas directamente en tu página de producto con un widget embebible
+                que se adapta al diseño de tu tienda.
               </p>
               <ul className="feature-bullets">
                 <li>
@@ -203,7 +188,7 @@ export default function Features() {
                       <path d="M2 5l2 2 4-4" stroke="#10B981" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
                   </span>
-                  Secuencia de emails automáticos
+                  Widget personalizable a tu marca
                 </li>
                 <li>
                   <span className="bullet-check">
@@ -211,7 +196,7 @@ export default function Features() {
                       <path d="M2 5l2 2 4-4" stroke="#10B981" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
                   </span>
-                  Timing optimizado para conversión
+                  Responsive, rápido y sin afectar performance
                 </li>
                 <li>
                   <span className="bullet-check">
@@ -219,7 +204,7 @@ export default function Features() {
                       <path d="M2 5l2 2 4-4" stroke="#10B981" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
                   </span>
-                  Reportes en tiempo real
+                  Rating promedio y distribución de estrellas
                 </li>
               </ul>
               <a href="#pricing" className="feature-link" style={{color:'var(--blue)'}}>
@@ -227,15 +212,16 @@ export default function Features() {
               </a>
             </div>
 
-            {/* Card 3 */}
+            {/* Card 3: SEO */}
             <div className="feature-card reveal reveal-delay-3">
               <div className="feature-icon-wrap" style={{background:'#d1fae5'}}>
-                <span>🛍️</span>
+                <span>🔍</span>
               </div>
-              <span className="feature-tag" style={{background:'#d1fae5', color:'#065f46'}}>Google Shopping</span>
-              <h3 className="feature-title">Google Merchant Sync</h3>
+              <span className="feature-tag" style={{background:'#d1fae5', color:'#065f46'}}>SEO</span>
+              <h3 className="feature-title">Valoraciones visibles en Google</h3>
               <p className="feature-desc">
-                Sincronizá tu catálogo con Google Shopping automáticamente. Más visibilidad, más tráfico orgánico gratuito.
+                Tus reviews generan rich snippets automáticamente. Tus productos aparecen con
+                estrellas en los resultados de búsqueda, lo que aumenta el porcentaje de clicks.
               </p>
               <ul className="feature-bullets">
                 <li>
@@ -244,7 +230,7 @@ export default function Features() {
                       <path d="M2 5l2 2 4-4" stroke="#10B981" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
                   </span>
-                  Sync de catálogo automático
+                  Rich snippets para Google automáticos
                 </li>
                 <li>
                   <span className="bullet-check">
@@ -252,7 +238,7 @@ export default function Features() {
                       <path d="M2 5l2 2 4-4" stroke="#10B981" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
                   </span>
-                  Feed XML/JSON actualizado
+                  Más clicks desde búsquedas orgánicas
                 </li>
                 <li>
                   <span className="bullet-check">
@@ -260,7 +246,7 @@ export default function Features() {
                       <path d="M2 5l2 2 4-4" stroke="#10B981" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
                   </span>
-                  Tráfico orgánico desde Google
+                  Sin configuración adicional
                 </li>
               </ul>
               <a href="#pricing" className="feature-link" style={{color:'var(--green-dark)'}}>

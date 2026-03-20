@@ -8,8 +8,16 @@ const faqs = [
     a: 'Sí, y es uno de los principales casos de uso. Si tienes una tienda desarrollada a medida (Node.js, Laravel, Django, o cualquier otra tecnología), solo pegas el snippet en tu HTML y listo. No dependes de ningún plugin ni plataforma específica.',
   },
   {
-    q: '¿Puedo usar solo reviews sin los addons?',
-    a: 'Sí, los addons son 100% opcionales. El plan base incluye todo el sistema de reviews. Puedes agregar el recuperador de carrito y Google Merchant Sync en cualquier momento, solo cuando lo necesites.',
+    q: '¿Cómo se recolectan los reviews de mis clientes?',
+    a: 'Cuando alguien completa una compra en tu tienda, Vincula detecta el evento y envía automáticamente un email pidiéndole su opinión sobre el producto. Si no responde, envía un recordatorio. El formulario es simple y está optimizado para que el cliente lo complete en menos de un minuto desde cualquier dispositivo.',
+  },
+  {
+    q: '¿Cómo se muestran los reviews en mi tienda?',
+    a: 'Con un widget embebible que pegas donde quieras en tu página de producto. Muestra el rating promedio, la distribución de estrellas y los últimos reviews. Es personalizable en colores y fuentes para que se integre al diseño de tu tienda, y no afecta la velocidad de carga.',
+  },
+  {
+    q: '¿Los reviews aparecen en Google?',
+    a: 'Sí. Vincula genera automáticamente el marcado JSON-LD necesario para que Google interprete las valoraciones de tus productos. Esto hace que tus páginas de producto puedan aparecer con estrellas en los resultados de búsqueda, lo que mejora el porcentaje de clicks sin ningún costo adicional.',
   },
   {
     q: '¿Cómo se cobra?',
@@ -21,7 +29,7 @@ const faqs = [
   },
   {
     q: '¿Cómo es el proceso de onboarding?',
-    a: 'Por ahora el acceso es por solicitud para garantizar soporte personalizado a cada tienda. Una vez aprobada tu solicitud, te contactamos en menos de 24 horas para hacer el setup juntos. Los primeros clientes tienen precio especial garantizado.',
+    a: 'El acceso es por solicitud para garantizar soporte personalizado a cada tienda. Una vez aprobada tu solicitud, te contactamos en menos de 24 horas para hacer el setup juntos. Los primeros clientes tienen precio especial garantizado.',
   },
 ]
 

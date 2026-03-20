@@ -196,16 +196,17 @@ export default function CTAFinal() {
         <div className="container">
           <div className="cta-inner reveal">
             <div className="cta-eyebrow">
-              <span style={{fontSize:'16px'}}>🔒</span>
-              Acceso limitado · Cupos disponibles
+              <span style={{fontSize:'16px'}}>⭐</span>
+              Reviews automáticos · Acceso anticipado
             </div>
 
             <h2 className="cta-title">
-              ¿Cuánto dinero perdiste<br />esta semana?
+              Tu tienda ya tiene tráfico.<br />Solo le faltan los reviews.
             </h2>
 
             <p className="cta-subtitle">
-              Cada día sin Vincula es carritos abandonados, reviews que no llegan y tráfico de Google que no ves.
+              Activa Vincula y empieza a recolectar reviews reales de tus clientes esta semana.
+              Sin desarrolladores, sin complicaciones.
             </p>
 
             <div className="cta-logos">
@@ -241,6 +242,13 @@ export default function CTAFinal() {
 
             {!submitted && (
               <div className="cta-micro">
+                <span className="cta-micro-item">
+                  <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                    <path d="M2 6l2.5 2.5 5.5-5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                  Setup en 5 minutos
+                </span>
+                <span className="cta-micro-dot" />
                 <span className="cta-micro-item">
                   <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
                     <path d="M2 6l2.5 2.5 5.5-5" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>

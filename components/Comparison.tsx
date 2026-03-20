@@ -4,8 +4,8 @@ export default function Comparison() {
     { feature: 'Soporte por WhatsApp', vincula: true, judge: false, yotpo: false },
     { feature: 'Ecommerce de desarrollo propio', vincula: true, judge: false, yotpo: false },
     { feature: 'Tiendanube / Jumpseller', vincula: true, judge: false, yotpo: false },
-    { feature: 'Recuperador de carrito', vincula: true, judge: false, yotpo: 'partial' },
-    { feature: 'Google Merchant Sync', vincula: true, judge: false, yotpo: false },
+    { feature: 'Rich snippets para Google', vincula: true, judge: true, yotpo: 'partial' },
+    { feature: 'Widget personalizable sin código', vincula: true, judge: true, yotpo: true },
     { feature: 'Precio base', vincula: '$15/mes', judge: '$15/mes', yotpo: '$15/mes+' },
   ]
 
@@ -207,7 +207,8 @@ export default function Comparison() {
               ¿Por qué Vincula y no las alternativas?
             </h2>
             <p className="section-subtitle" style={{margin:'0 auto'}}>
-              La única solución con soporte real en español y compatibilidad con ecommerce de desarrollo propio.
+              La única solución de reviews con soporte real en español y compatibilidad
+              con tiendas de desarrollo propio.
             </p>
           </div>
 
