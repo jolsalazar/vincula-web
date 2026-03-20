@@ -188,7 +188,7 @@ export default function Results() {
 
             <div className="results-grid">
               <div className="result-card reveal reveal-delay-1">
-                <span className="result-icon">🛒</span>
+                <span className="result-icon">💬</span>
                 <h3 className="result-card-title">Más confianza, más ventas</h3>
                 <p className="result-card-body">
                   El visitante que llega a tu tienda por primera vez no te conoce.
@@ -218,8 +218,8 @@ export default function Results() {
                 <h3 className="result-card-title">Reviews que llegan solos</h3>
                 <p className="result-card-body">
                   Cada compra dispara el proceso automáticamente. Email, recordatorio,
-                  publicación. Tú no haces nada. Los reviews se acumulan mientras trabajás
-                  en tu negocio.
+                  publicación. Tú no haces nada. Los reviews se acumulan mientras
+                  trabajas en tu negocio.
                 </p>
                 <div className="result-highlight">
                   <div className="result-highlight-value">0</div>
@@ -231,22 +231,22 @@ export default function Results() {
             {/* Math row */}
             <div className="results-math reveal">
               <div className="math-item">
-                <span className="math-value">1,000</span>
-                <span className="math-label">visitas/mes a tu tienda</span>
+                <span className="math-value">2%</span>
+                <span className="math-label">conversión actual típica</span>
               </div>
-              <span className="math-separator">×</span>
+              <span className="math-separator">→</span>
               <div className="math-item">
-                <span className="math-value">+30%</span>
-                <span className="math-label">más conversión con reviews</span>
+                <span className="math-value">2.6%</span>
+                <span className="math-label">con reviews activos (+30% relativo)</span>
               </div>
               <span className="math-separator">=</span>
               <div className="math-item math-result">
-                <span className="math-value">+300 ventas</span>
-                <span className="math-label">adicionales con el mismo tráfico</span>
+                <span className="math-value">+30 ventas</span>
+                <span className="math-label">más por cada 5,000 visitas/mes</span>
               </div>
               <p className="math-note">
-                Reviews activos no requieren más inversión en publicidad.
-                El tráfico que ya tenés convierte mejor.
+                Sin cambiar tu inversión en publicidad ni tu tráfico.
+                Solo convirtiendo mejor el tráfico que ya tienes.
               </p>
             </div>
           </div>

@@ -135,7 +135,7 @@ export default function Footer() {
                 </span>
               </a>
               <p className="footer-tagline">
-                Conectá tu tienda con tus clientes. Reviews, carrito y Google Shopping en un solo lugar.
+                Reviews automáticos para ecommerce. Recolecta, muestra y aprovecha las reseñas reales de tus clientes.
               </p>
               <div className="footer-social">
                 <a href="#" className="footer-social-link" aria-label="Twitter/X">
@@ -187,7 +187,7 @@ export default function Footer() {
 
           <div className="footer-bottom">
             <p className="footer-copy">
-              Hecho con <span className="footer-heart">❤️</span> para el ecommerce en español · vincula.io · {year}
+              Hecho con <span className="footer-heart">❤️</span> para el ecommerce · vincula.io · {year}
             </p>
             <div className="footer-legal">
               <a href="#">Términos de servicio</a>

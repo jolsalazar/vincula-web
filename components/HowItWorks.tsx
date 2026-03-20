@@ -3,9 +3,9 @@ export default function HowItWorks() {
     {
       number: '01',
       icon: '⚡',
-      title: 'Pega una línea de código',
-      description: 'Instala el widget en tu tienda igual que Google Analytics. Sin programación, sin complicaciones.',
-      detail: 'Copia el snippet y pégalo en el <head> de tu tienda. Funciona en cualquier plataforma o desarrollo propio.',
+      title: 'Instala el widget en tu tienda',
+      description: 'Pega el snippet en el <head> de tu tienda y el widget de reviews queda activo de inmediato.',
+      detail: 'Un script, sin dependencias. Funciona en cualquier plataforma o desarrollo propio, sin tocar más código.',
       color: '#dbeafe',
       textColor: '#1e40af',
     },
@@ -13,7 +13,7 @@ export default function HowItWorks() {
       number: '02',
       icon: '⚙️',
       title: 'Personaliza el widget y los emails',
-      description: 'Desde el dashboard configurás los textos, colores, timing de los emails y cómo se muestran los reviews.',
+      description: 'Desde el dashboard configuras los textos, colores, timing de los emails y cómo se muestran los reviews.',
       detail: 'Todo desde una interfaz visual. Sin tocar código, sin llamar a un desarrollador.',
       color: '#d1fae5',
       textColor: '#065f46',
@@ -213,7 +213,7 @@ export default function HowItWorks() {
               Instalado en minutos,<br />reviews desde el primer día
             </h2>
             <p className="section-subtitle" style={{margin:'0 auto'}}>
-              Sin desarrolladores ni integraciones complicadas. Una línea de código y Vincula empieza a trabajar.
+              Sin desarrolladores ni integraciones complicadas. El widget se instala en minutos; los emails se configuran desde el dashboard.
             </p>
           </div>
 
@@ -273,7 +273,7 @@ export default function HowItWorks() {
                     <span className="code-cursor" />
                   </span>
                   {'\n\n'}
-                  <span className="code-comment">{'<!-- ¡Listo! Vincula ya está activo 🚀 -->'}</span>
+                  <span className="code-comment">{'<!-- El widget queda visible en tu tienda ✓ -->'}</span>
                 </div>
               </div>
 
