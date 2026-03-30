@@ -152,7 +152,7 @@ export default function Navbar() {
           <div className="nav-inner">
             <a href="#" className="nav-logo" aria-label="Ouivi.io inicio">
               <span className="nav-logo-text">
-                V<span style={{color:'var(--blue)'}}>i</span>ncula
+                O<span style={{color:'var(--blue)'}}>u</span>ivi
                 <span className="nav-logo-dot" aria-hidden="true" />
                 <span style={{color:'var(--gray-400)'}}>io</span>
               </span>
