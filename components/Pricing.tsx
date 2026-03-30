@@ -29,6 +29,7 @@ const plans: Plan[] = [
       { text: 'Widget embebible', included: true },
       { text: 'Email post-compra', included: true },
       { text: 'Dashboard de métricas', included: true },
+      { text: 'Resumen IA de opiniones', included: false },
       { text: 'Soporte prioritario', included: false },
     ],
   },
@@ -47,6 +48,7 @@ const plans: Plan[] = [
       { text: 'Widget embebible', included: true },
       { text: 'Email post-compra', included: true },
       { text: 'Dashboard de métricas', included: true },
+      { text: 'Resumen IA de opiniones', included: true },
       { text: 'Soporte prioritario', included: true },
     ],
   },
@@ -61,30 +63,24 @@ const plans: Plan[] = [
     features: [
       { text: '10 tiendas', included: true },
       { text: 'Reviews ilimitados', included: true },
-      { text: 'White label', included: true },
+      { text: 'Widget embebible', included: true },
       { text: 'Email post-compra', included: true },
       { text: 'Dashboard de métricas', included: true },
-      { text: 'Soporte dedicado', included: true },
+      { text: 'Resumen IA de opiniones', included: true },
+      { text: 'White label + soporte dedicado', included: true },
     ],
   },
 ]
 
 const addons = [
   {
-    icon: '🛒',
-    name: 'Recuperador de carrito',
-    price: '+$19/mes',
-    description: 'Emails automáticos, hasta 5.000/mes',
-    color: '#dbeafe',
-    textColor: 'var(--blue)',
-  },
-  {
     icon: '🛍️',
     name: 'Google Merchant Sync',
     price: '+$15/mes',
-    description: 'Sincronización automática del feed',
+    description: 'Sincronización automática de tu feed de productos',
     color: '#d1fae5',
     textColor: 'var(--green-dark)',
+    comingSoon: false,
   },
 ]
 
@@ -281,9 +277,9 @@ export default function Pricing() {
         }
         .addons-grid {
           display: grid;
-          grid-template-columns: repeat(2, 1fr);
+          grid-template-columns: 1fr;
           gap: 16px;
-          max-width: 700px;
+          max-width: 480px;
           margin: 0 auto;
         }
         .addon-card {
@@ -333,7 +329,6 @@ export default function Pricing() {
           .plans-grid { grid-template-columns: 1fr; max-width: 380px; margin: 0 auto; }
           .plan-popular { transform: none; }
           .plan-popular:hover { transform: translateY(-4px); }
-          .addons-grid { grid-template-columns: 1fr; max-width: 380px; }
         }
         @media (min-width: 601px) and (max-width: 968px) {
           .plans-grid { grid-template-columns: repeat(2, 1fr); max-width: none; }

@@ -3,9 +3,9 @@ export default function Comparison() {
     { feature: 'Interfaz y soporte en español', ouivi: true, judge: false, yotpo: false },
     { feature: 'Soporte por WhatsApp', ouivi: true, judge: false, yotpo: false },
     { feature: 'Ecommerce de desarrollo propio', ouivi: true, judge: false, yotpo: false },
-    { feature: 'Tiendanube / Jumpseller', ouivi: true, judge: false, yotpo: false },
     { feature: 'Rich snippets para Google', ouivi: true, judge: true, yotpo: 'partial' },
     { feature: 'Widget personalizable sin código', ouivi: true, judge: true, yotpo: true },
+    { feature: 'Resumen IA de opiniones', ouivi: true, judge: false, yotpo: 'partial' },
     { feature: 'Precio base', ouivi: '$15/mes', judge: '$15/mes', yotpo: '$15/mes+' },
   ]
 
@@ -207,8 +207,8 @@ export default function Comparison() {
               ¿Por qué Ouivi y no las alternativas?
             </h2>
             <p className="section-subtitle" style={{margin:'0 auto'}}>
-              La mejor opción de reviews para ecommerce en español,
-              con soporte real y compatibilidad con tiendas de desarrollo propio.
+              La mejor opción de reviews para ecommerce de desarrollo propio en español,
+              con soporte real, IA incluida y sin depender de plugins.
             </p>
           </div>
 

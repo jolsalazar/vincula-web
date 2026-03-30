@@ -5,7 +5,7 @@ export default function Features() {
         .features { background: var(--gray-50); }
         .features-grid {
           display: grid;
-          grid-template-columns: repeat(3, 1fr);
+          grid-template-columns: repeat(2, 1fr);
           gap: 24px;
           margin-top: 56px;
         }
@@ -101,10 +101,10 @@ export default function Features() {
           transition: gap 0.2s;
         }
         .feature-link:hover { gap: 10px; }
-        @media (max-width: 968px) {
+        @media (max-width: 768px) {
           .features-grid { grid-template-columns: 1fr; max-width: 480px; margin-left: auto; margin-right: auto; }
         }
-        @media (min-width: 601px) and (max-width: 968px) {
+        @media (min-width: 601px) and (max-width: 768px) {
           .features-grid { grid-template-columns: repeat(2, 1fr); max-width: none; }
         }
       `}</style>
@@ -250,6 +250,49 @@ export default function Features() {
                 </li>
               </ul>
               <a href="#pricing" className="feature-link" style={{color:'var(--green-dark)'}}>
+                Ver planes →
+              </a>
+            </div>
+
+            {/* Card 4: Resumen IA */}
+            <div className="feature-card reveal reveal-delay-4">
+              <div className="feature-icon-wrap" style={{background:'#f3e8ff'}}>
+                <span>✨</span>
+              </div>
+              <span className="feature-tag" style={{background:'#f3e8ff', color:'#6b21a8'}}>IA</span>
+              <h3 className="feature-title">Resumen inteligente de opiniones</h3>
+              <p className="feature-desc">
+                La IA analiza todos los comentarios de un producto y genera un resumen claro
+                con los puntos fuertes y débiles. Tus compradores entienden la opinión general
+                de un vistazo, igual que en Mercado Libre.
+              </p>
+              <ul className="feature-bullets">
+                <li>
+                  <span className="bullet-check">
+                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+                      <path d="M2 5l2 2 4-4" stroke="#10B981" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </span>
+                  Resumen generado a partir de reviews reales
+                </li>
+                <li>
+                  <span className="bullet-check">
+                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+                      <path d="M2 5l2 2 4-4" stroke="#10B981" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </span>
+                  Destaca pros y contras mencionados por clientes
+                </li>
+                <li>
+                  <span className="bullet-check">
+                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+                      <path d="M2 5l2 2 4-4" stroke="#10B981" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </span>
+                  Se actualiza automáticamente con cada nuevo review
+                </li>
+              </ul>
+              <a href="#pricing" className="feature-link" style={{color:'#7c3aed'}}>
                 Ver planes →
               </a>
             </div>
