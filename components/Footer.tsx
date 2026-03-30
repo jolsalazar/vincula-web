@@ -129,7 +129,7 @@ export default function Footer() {
             <div className="footer-brand">
               <a href="#" className="footer-logo" aria-label="Ouivi.io inicio">
                 <span className="footer-logo-text">
-                  V<span style={{color:'var(--blue-light)'}}>i</span>ncula
+                  O<span style={{color:'var(--blue-light)'}}>u</span>ivi
                   <span className="footer-logo-dot" />
                   <span style={{color:'rgb(255 255 255 / 0.3)'}}>io</span>
                 </span>
