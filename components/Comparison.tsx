@@ -1,12 +1,14 @@
+import { BRAND } from '@/lib/brand'
+
 export default function Comparison() {
   const rows = [
-    { feature: 'Interfaz y soporte en español', ouivi: true, judge: false, yotpo: false },
-    { feature: 'Soporte por WhatsApp', ouivi: true, judge: false, yotpo: false },
-    { feature: 'Ecommerce de desarrollo propio', ouivi: true, judge: false, yotpo: false },
-    { feature: 'Rich snippets para Google', ouivi: true, judge: true, yotpo: 'partial' },
-    { feature: 'Widget personalizable sin código', ouivi: true, judge: true, yotpo: true },
-    { feature: 'Resumen IA de opiniones', ouivi: true, judge: false, yotpo: 'partial' },
-    { feature: 'Precio base', ouivi: '$15/mes', judge: '$15/mes', yotpo: '$15/mes+' },
+    { feature: 'Interfaz y soporte en español', ours: true, judge: false, yotpo: false },
+    { feature: 'Soporte por WhatsApp', ours: true, judge: false, yotpo: false },
+    { feature: 'Ecommerce de desarrollo propio', ours: true, judge: false, yotpo: false },
+    { feature: 'Rich snippets para Google', ours: true, judge: true, yotpo: 'partial' },
+    { feature: 'Widget personalizable sin código', ours: true, judge: true, yotpo: true },
+    { feature: 'Resumen IA de opiniones', ours: true, judge: false, yotpo: 'partial' },
+    { feature: 'Precio base', ours: '$15/mes', judge: '$15/mes', yotpo: '$15/mes+' },
   ]
 
   type CellValue = boolean | string | 'partial'
@@ -62,7 +64,7 @@ export default function Comparison() {
           letter-spacing: 0.04em;
           text-transform: uppercase;
         }
-        .comp-header-cell.is-ouivi {
+        .comp-header-cell.is-ours {
           background: var(--blue);
           color: var(--white);
           position: relative;
@@ -71,7 +73,7 @@ export default function Comparison() {
           justify-content: center;
           gap: 2px;
         }
-        .comp-header-cell.is-ouivi::before {
+        .comp-header-cell.is-ours::before {
           content: '';
           position: absolute;
           top: 0; left: 0; right: 0;
@@ -110,7 +112,7 @@ export default function Comparison() {
         }
         .comp-row:last-child { border-bottom: none; }
         .comp-row:hover .comp-cell { background: var(--gray-50); }
-        .comp-row:hover .comp-cell.is-ouivi { background: #1d58e8; }
+        .comp-row:hover .comp-cell.is-ours { background: #1d58e8; }
 
         .comp-cell {
           padding: 16px 20px;
@@ -120,7 +122,7 @@ export default function Comparison() {
           transition: background 0.15s;
         }
         .comp-cell:first-child { justify-content: flex-start; }
-        .comp-cell.is-ouivi {
+        .comp-cell.is-ours {
           background: rgb(37 99 235 / 0.04);
           border-left: 1px solid rgb(37 99 235 / 0.12);
           border-right: 1px solid rgb(37 99 235 / 0.12);
@@ -204,7 +206,7 @@ export default function Comparison() {
               Comparativa
             </span>
             <h2 className="section-title" style={{marginBottom:'16px'}}>
-              ¿Por qué Ouivi y no las alternativas?
+              ¿Por qué {BRAND.name} y no las alternativas?
             </h2>
             <p className="section-subtitle" style={{margin:'0 auto'}}>
               La mejor opción de reviews para ecommerce de desarrollo propio en español,
@@ -216,8 +218,8 @@ export default function Comparison() {
             {/* Header */}
             <div className="comp-header">
               <div className="comp-header-cell">Característica</div>
-              <div className="comp-header-cell is-ouivi">
-                <span className="comp-col-name">Ouivi.io</span>
+              <div className="comp-header-cell is-ours">
+                <span className="comp-col-name">{BRAND.siteName}</span>
                 <span className="comp-col-badge">⚡ Recomendado</span>
               </div>
               <div className="comp-header-cell" style={{textAlign:'center'}}>Judge.me</div>
@@ -230,8 +232,8 @@ export default function Comparison() {
                 <div className="comp-cell">
                   <span className="comp-feature-name">{row.feature}</span>
                 </div>
-                <div className="comp-cell is-ouivi">
-                  {renderCell(row.ouivi, true)}
+                <div className="comp-cell is-ours">
+                  {renderCell(row.ours, true)}
                 </div>
                 <div className="comp-cell">{renderCell(row.judge)}</div>
                 <div className="comp-cell">{renderCell(row.yotpo)}</div>

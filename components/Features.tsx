@@ -1,3 +1,5 @@
+import { BRAND } from '@/lib/brand'
+
 export default function Features() {
   return (
     <>
@@ -136,7 +138,7 @@ export default function Features() {
               <span className="feature-tag" style={{background:'#fef3c7', color:'#92400e'}}>Recolección</span>
               <h3 className="feature-title">Reviews automáticos post-compra</h3>
               <p className="feature-desc">
-                Cuando alguien compra en tu tienda, Ouivi le envía un email pidiendo su opinión.
+                Cuando alguien compra en tu tienda, {BRAND.name} le envía un email pidiendo su opinión.
                 Sin intervención manual, sin recordarlo tú.
               </p>
               <ul className="feature-bullets">

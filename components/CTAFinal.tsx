@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { BRAND } from '@/lib/brand'
 
 export default function CTAFinal() {
   const [email, setEmail] = useState('')
@@ -205,7 +206,7 @@ export default function CTAFinal() {
             </h2>
 
             <p className="cta-subtitle">
-              Activa Ouivi y empieza a recolectar reviews reales de tus clientes esta semana.
+              Activa {BRAND.name} y empieza a recolectar reviews reales de tus clientes esta semana.
               Sin desarrolladores, sin complicaciones.
             </p>
 

@@ -1,32 +1,33 @@
 import type { Metadata } from 'next'
+import { BRAND } from '@/lib/brand'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Ouivi.io — Reviews, recuperador de carrito y Google Merchant para tu ecommerce',
+  title: `${BRAND.siteName} — Reviews, recuperador de carrito y Google Merchant para tu ecommerce`,
   description: 'Reviews automáticos, recuperador de carrito y Google Merchant Sync en una sola herramienta. Compatible con cualquier ecommerce: Tiendanube, WooCommerce, desarrollo propio y más. En español, con soporte local.',
   keywords: 'reviews ecommerce, recuperador de carrito, google merchant sync, tiendanube, jumpseller, woocommerce',
-  authors: [{ name: 'Ouivi.io' }],
+  authors: [{ name: BRAND.siteName }],
   openGraph: {
-    title: 'Ouivi.io — Vende más en tu ecommerce',
+    title: `${BRAND.siteName} — Vende más en tu ecommerce`,
     description: 'Reviews automáticos, recuperador de carrito y Google Merchant Sync. En español, con soporte local.',
-    url: 'https://ouivi.io',
-    siteName: 'Ouivi.io',
+    url: BRAND.url,
+    siteName: BRAND.siteName,
     locale: 'es_419',
     type: 'website',
     images: [
       {
-        url: 'https://ouivi.io/og-image.svg',
+        url: `${BRAND.url}/og-image.svg`,
         width: 1200,
         height: 630,
-        alt: 'Ouivi.io — Reviews, recuperador de carrito y Google Merchant Sync',
+        alt: `${BRAND.siteName} — Reviews, recuperador de carrito y Google Merchant Sync`,
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Ouivi.io — Vende más en tu ecommerce',
+    title: `${BRAND.siteName} — Vende más en tu ecommerce`,
     description: 'Reviews automáticos, recuperador de carrito y Google Merchant Sync.',
-    images: ['https://ouivi.io/og-image.svg'],
+    images: [`${BRAND.url}/og-image.svg`],
   },
   robots: {
     index: true,

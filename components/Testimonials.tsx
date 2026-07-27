@@ -2,9 +2,11 @@
 // antes de publicar. Las citas actuales son representativas del tipo de feedback
 // que se espera, pero deben ser validadas o sustituidas por citas reales.
 
+import { BRAND } from '@/lib/brand'
+
 const testimonials = [
   {
-    quote: 'Antes teníamos que pedirle reviews a cada cliente por separado. Con Ouivi el proceso es completamente automático. Hoy tenemos reviews reales en nuestra página de producto sin esfuerzo de nuestra parte.',
+    quote: `Antes teníamos que pedirle reviews a cada cliente por separado. Con ${BRAND.name} el proceso es completamente automático. Hoy tenemos reviews reales en nuestra página de producto sin esfuerzo de nuestra parte.`,
     name: 'Sofía R.',
     store: 'Tienda de moda femenina',
     storeType: 'WooCommerce',
@@ -20,7 +22,7 @@ const testimonials = [
     color: '#7c3aed',
   },
   {
-    quote: 'Empezamos a ver reviews en Google a las pocas semanas. Es algo que llevábamos tiempo queriendo resolver y con Ouivi no necesitamos configurar nada extra.',
+    quote: `Empezamos a ver reviews en Google a las pocas semanas. Es algo que llevábamos tiempo queriendo resolver y con ${BRAND.name} no necesitamos configurar nada extra.`,
     name: 'Carmen V.',
     store: 'Tienda de productos naturales',
     storeType: 'Tiendanube',
@@ -158,7 +160,7 @@ export default function Testimonials() {
               Lo que dicen quienes ya lo usan
             </h2>
             <p className="section-subtitle" style={{margin:'0 auto'}}>
-              Ouivi está en beta activa con un grupo reducido de tiendas.
+              {BRAND.name} está en beta activa con un grupo reducido de tiendas.
               Estos son algunos de sus comentarios.
             </p>
           </div>

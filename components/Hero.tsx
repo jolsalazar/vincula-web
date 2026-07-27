@@ -1,5 +1,7 @@
 'use client'
 
+import { BRAND } from '@/lib/brand'
+
 export default function Hero() {
   return (
     <>
@@ -304,7 +306,7 @@ export default function Hero() {
               </h1>
 
               <p className="hero-subtitle">
-                Ouivi recolecta reviews reales de tus clientes, los muestra en tu tienda
+                {BRAND.name} recolecta reviews reales de tus clientes, los muestra en tu tienda
                 y los usa para mejorar tu visibilidad en Google. Automático, desde el primer día.
               </p>
 
@@ -356,7 +358,7 @@ export default function Hero() {
                     <span className="titlebar-dot" style={{background:'#ff5f57'}} />
                     <span className="titlebar-dot" style={{background:'#febc2e'}} />
                     <span className="titlebar-dot" style={{background:'#28c840'}} />
-                    <span className="titlebar-url">app.ouivi.io/reviews</span>
+                    <span className="titlebar-url">{`${BRAND.appHost}/reviews`}</span>
                   </div>
                   <div className="dashboard-body">
                     <div className="dash-header">

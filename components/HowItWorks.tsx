@@ -1,3 +1,5 @@
+import { BRAND } from '@/lib/brand'
+
 export default function HowItWorks() {
   const steps = [
     {
@@ -13,7 +15,7 @@ export default function HowItWorks() {
       number: '02',
       icon: '⚙️',
       title: 'Conecta tu tienda y configura los emails',
-      description: 'Ouivi necesita saber cuándo ocurre una compra para enviar el email de review. La conexión se hace una sola vez.',
+      description: `${BRAND.name} necesita saber cuándo ocurre una compra para enviar el email de review. La conexión se hace una sola vez.`,
       detail: 'En plataformas como Shopify, WooCommerce o Tiendanube: un webhook sin tocar código. En tiendas propias: una llamada a nuestra API cuando la orden se completa. Te acompañamos en este paso.',
       color: '#d1fae5',
       textColor: '#065f46',
@@ -256,7 +258,7 @@ export default function HowItWorks() {
                   {'\n     '}
                   <span className="code-attr">href</span>
                   <span style={{color:'#e2e8f0'}}>=</span>
-                  <span className="code-value">"https://cdn.ouivi.io/widget.css"</span>
+                  <span className="code-value">{`"${BRAND.cdn}/widget.css"`}</span>
                   <span className="code-tag">{' />'}</span>
                   {'\n\n'}
                   <span className="code-highlight">
@@ -264,7 +266,7 @@ export default function HowItWorks() {
                     {'\n  '}
                     <span className="code-attr">  src</span>
                     <span style={{color:'#e2e8f0'}}>=</span>
-                    <span className="code-string">"https://cdn.ouivi.io/widget.js"</span>
+                    <span className="code-string">{`"${BRAND.cdn}/widget.js"`}</span>
                     {'\n  '}
                     <span className="code-attr">  data-key</span>
                     <span style={{color:'#e2e8f0'}}>=</span>

@@ -1,3 +1,5 @@
+import { BRAND } from '@/lib/brand'
+
 export default function Results() {
   return (
     <>
@@ -182,7 +184,7 @@ export default function Results() {
               </h2>
               <p className="results-subtitle">
                 La prueba social es el factor que más influye en la decisión de compra.
-                Ouivi te ayuda a construirla de forma automática, sin esfuerzo.
+                {BRAND.name} te ayuda a construirla de forma automática, sin esfuerzo.
               </p>
             </div>
 

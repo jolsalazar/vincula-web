@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import { BRAND } from '@/lib/brand'
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
@@ -150,7 +151,7 @@ export default function Navbar() {
       <nav className={`navbar${scrolled ? ' scrolled' : ''}`}>
         <div className="container">
           <div className="nav-inner">
-            <a href="#" className="nav-logo" aria-label="Ouivi.io inicio">
+            <a href="#" className="nav-logo" aria-label={`${BRAND.siteName} inicio`}>
               <span className="nav-logo-text">
                 O<span style={{color:'var(--blue)'}}>u</span>ivi
                 <span className="nav-logo-dot" aria-hidden="true" />
