@@ -1,6 +1,6 @@
-# Vincula.io — Landing Page
+# Ouivi.io — Landing Page
 
-Landing page estática de [Vincula.io](https://vincula.io) construida con **Next.js 14** y exportada como sitio estático. Lista para deploy en **Cloudflare Pages**.
+Landing page estática de [Ouivi.io](https://ouivi.io) construida con **Next.js 14** y exportada como sitio estático. Lista para deploy en **Cloudflare Pages**.
 
 ## Stack
 
@@ -111,12 +111,12 @@ vincula-web/
 ## Dominio personalizado en Cloudflare Pages
 
 1. En el dashboard de tu proyecto Pages → **"Custom domains"**
-2. Agregá `vincula.io` y `www.vincula.io`
+2. Agregá `ouivi.io` y `www.ouivi.io`
 3. Cloudflare configura el SSL automáticamente
 
 Para redirigir `www` → apex (o viceversa), usá una **Redirect Rule** en Cloudflare:
 - En **Rules** → **Redirect Rules**
-- Hostname: `www.vincula.io` → Redirigir a `https://vincula.io/{uri_path}` (301)
+- Hostname: `www.ouivi.io` → Redirigir a `https://ouivi.io/{uri_path}` (301)
 
 ---
 
@@ -149,4 +149,4 @@ Los precios están en `components/Pricing.tsx` en el array `plans`.
 
 ---
 
-Hecho con ❤️ para el ecommerce latinoamericano · [vincula.io](https://vincula.io)
+Hecho con ❤️ para el ecommerce latinoamericano · [ouivi.io](https://ouivi.io)
